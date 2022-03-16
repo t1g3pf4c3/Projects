@@ -1,0 +1,218 @@
+
+body{
+	background-color: #fcde67;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+
+}
+.NatFormItem{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.NatFormItem p{
+	font-size: 30px;
+	width: 50%;
+	text-align: center;
+}
+.BirthForm{
+	display: flex;
+	flex-direction: column;
+}
+.BirthForm select{
+	padding: 30px;
+	border-radius: 20px;
+	font-size: 30px;
+	background-color: rgba(0, 0, 0, 0);
+	margin-right: 10px;
+	text-align: center;
+
+}
+.NatRadio{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.NatRadio input{
+	margin-right: 10px;
+	margin-left: 30px;
+	padding: auto;
+	font-size: 20px;
+}
+
+.NatBut{
+	height: 70px;
+
+	border:solid 5px rgba(0, 0, 0, 0.1);
+	background-color: #5bccf6;
+	border-radius: 20px;
+	margin: 10px;
+	font-size: 30px;
+}
+.Sus{
+	padding: 30px;
+	border-radius: 20px;
+	font-size: 30px;
+	border:solid 5px rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0);
+	margin-right: 10px;
+	text-align: center;
+}
+.NatInf{
+	margin: 10px;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	border-radius: 20px;
+	border: solid 5px #5bccf6;
+}
+.NatForm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+footer{
+	/* position: fixed; 
+	bottom: 0;  */
+	margin-top: 100px;
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.footLinks{
+	display: flex;
+	align-items: center;
+}
+.footImg{
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 20px;
+	width: 50px;
+}
+#rockSec{
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+}
+.NatItem{
+	margin-top: 60px;
+	margin-bottom: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	border-radius: 20px;
+	min-width: 900px;
+	border: solid 5px;
+	border-radius: 25px;
+	border-color: rgba(0, 0, 0, 0.1);
+	/* filter: drop-shadow(0 0 6px rgb(0, 116, 110)); */
+
+}
+.rockComment{
+	/* background-color: rgba(255, 255, 0, 1);
+	border-radius: 20px; */
+	width: 100%;
+}
+.NatalH2{
+	background-color: #5bccf6; 
+	margin-top: 0px;
+	border-radius: 20px 20px 20px 20px;
+	height: 70px;
+	width: 100%;
+	text-align: center;
+
+}
+header{
+background-color: #5bccf6;
+border-radius: 0 0 20px 20px;
+/* filter: drop-shadow(0 0 6px rgb(0, 116, 110)); */
+
+margin-bottom: 50px;
+}
+.headNavImg{
+	width: 30px;
+	border-radius: 20px;
+	border: solid;
+	border-color: #fcde67;
+}
+.headNavItem{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+figcaption{
+	text-align: center;
+}
+.headNavSec{
+border-bottom: solid 5px;
+border-color: rgba(0, 0, 0, 0.1);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content:space-around;
+	background-color: #5bccf6;
+	width: 100%;
+	border-radius: 20px;
+}
+h1{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin: 0px;
+	text-align: center;
+	border-bottom: 5px solid;
+	border-color: rgba(0, 0, 0, 0.1);
+}
+h2{
+	vertical-align: middle;
+	display: inline-block;
+	line-height: normal;
+	margin-left: 30px;
+}
+p{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.NatFormText{
+	display: flex;
+	flex-direction: column;
+}
+.prText{
+	background-color: aqua;
+	height:  100%;
+	margin-top: -50px;
+}
+.rockImg{
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+	margin: 20px;
+	
+}
+.rockImgBor{
+	background-color: #5bccf6;
+	border-radius: 20px 0 20px 20px;
+
+}
+
+.headNavRockImg{
+	border: solid;
+	border-color: #fcde67;
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+}	

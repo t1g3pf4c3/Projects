@@ -1,0 +1,80 @@
+#lang racket
+
+(require math/number-theory)
+"Задание 1"
+(define (ma a b)
+  (if (> a b)
+      a
+      b
+      )
+  )
+(ma 3 4)
+
+(define (mi a b)
+  (if (> a b)
+      b
+      a
+      )
+  )
+
+(mi 3 4)
+"Задание 2"
+(define (fun a b c)
+  (- (expt (ma (ma (+ a b) (+ a c)) (+ b c)) 2)
+     (* (ma (ma (* a b) (* a c)) (* b c)) 2)
+  )
+  )
+(fun 3 2 1)
+  
+"Задание 3"
+(define (teen age)
+ (if (and (> age 13) (< age 19))
+     #t
+     #f
+     )
+  )
+(teen 12)
+(teen 20)
+
+(define (valid-date? day month year)
+  (and
+    (> day 0)
+    (> month 0)
+    (<= month 12)
+    (<= day 31)
+ 
+
+    
+
+    (or (and (eq? month 2) (eq? day 29) (or (and(divides? 4 year) (not(divides? 100 year))) (divides? 400 year)) )  
+     ( not(and(eq? month 2) (eq? day 29)))
+    )
+    
+    (or (and (eq? month 2) (<= day 29))
+    (not (eq? month 2))
+    )
+
+    (or
+      (and 
+        (eq? day 31) 
+          (or 
+            (and (divides? month 2) (< month 6))
+            (and (not (divides? month 2)) (> month 6))
+          )
+      )
+      (not(eq? day 31))
+    )
+  )
+  
+)
+"валидата"
+(valid-date? 10 4 1949)
+
+
+(valid-date? 1 0 1949) 
+
+
+(valid-date? 29 2 1900) 
+
+
+(valid-date? 29 2 2000) 

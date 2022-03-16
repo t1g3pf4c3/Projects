@@ -1,0 +1,28 @@
+#lang racket
+
+(define (far-cel val)
+  (/ (- val 32.) 1.8)
+  )
+
+(far-cel 451)
+
+(define (cel-far val)
+  (* 5/9 (- val 32))
+  )
+
+(cel-far 37.5)
+
+(define (sci val pow)
+  (* val (expt 10 pow))
+  )
+(sci 7 3)
+(sci 42. -5) "вот тут непонятно"
+
+(define (tip val)
+  (- (+ (ceiling (* 0.15 val))
+   (- (ceiling val) val)) 1)
+  )
+
+
+(tip 29.23)
+(tip 7.54)

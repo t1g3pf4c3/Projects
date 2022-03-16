@@ -1,0 +1,55 @@
+#lang racket
+
+(map (lambda (x y) (cons x y)) '(masha kate) '(ivanova pretova))
+
+(define (make-polar-pair a b)
+(if (> a 0)
+(cons a b)
+#f
+)
+)
+
+(define (get-polar-pair-radius a)
+(car a)
+)
+
+(define (get-polar-pair-degree a)
+(cdr a)
+)
+
+(define pp (make-polar-pair 3 8))
+
+
+(pair? pp)
+(get-polar-pair-radius pp)
+(get-polar-pair-degree pp)
+
+(define user-ages
+
+  (list (cons "Anny" 20)
+
+        (cons "Kate" 38)
+
+        (cons "Jack" 31)) )
+
+
+(if (null? '())
+#t #f)
+
+(define (find-user a b)
+    
+    (if (null? b) #f
+    
+        
+    (if (eq? a (car (car b)))
+        (car b)
+        (find-user a (cdr b))
+    )
+
+    )
+)
+
+
+
+(find-user "Jck" user-ages) 
+
