@@ -13,6 +13,8 @@ class FormalLang{
     }
    
     ruleFromText(ruleText) {
+        ruleText = ruleText.split(" ").join("");
+        // console.log(ruleText.split(" ").join(""));
         let ruleMas = ruleText.split(/\n/).map(rule=> rule.split("→"));
         //// console.log(ruleMas);
         ruleMas.forEach(rule => {
@@ -24,8 +26,12 @@ class FormalLang{
     ruleToCharArr(rule) {
        
         this.ruleStrMas = [];
-        this.rulesLeft().forEach(rule => {            
-            this.ruleStrMas.push([rule.split(""),(this.ruleObj[rule].join("").split(""))]);        
+        this.rulesLeft().forEach(rule => {   
+            
+            // console.log(this.ruleObj[rule]);         
+            if(this.ruleObj[rule]) {
+            this.ruleStrMas.push([rule.split(""),(this.ruleObj[rule].join("").split(""))]);    
+            }    
         })
         return this.ruleStrMas;
     }
@@ -49,7 +55,9 @@ class FormalLang{
 
     
     getNonTerminals() {
+        
         this.getTerminals()
+        // console.log(this.nonTerminals);
         return this.nonTerminals;
     }
 
@@ -69,6 +77,7 @@ class FormalLang{
         }
         return this.reachable;
     }
+
     removeUnreachable(){
         let obj = {};
         let reachable = [...this.getReachable(this.getFirstUnTerm())]
@@ -77,63 +86,143 @@ class FormalLang{
         return this;            
     }
 
-    getProvide(){
-        this.provide = new Set();
-        this.rulesLeft().forEach(leftrule => {
-            console.log(this.ruleObj[leftrule])
-        });
-        // console.log(this.provide);
-        return this.provide;
-    }
-
     removeUnprovide(){
-        // let obj = {};
-        // this.getProvide(0);
-        // console.log(this.ruleObj);
+        this.unprovide = new Set();
+        this.rulesLeft().forEach(leftrule => {
+            // console.log(this.ruleObj[leftrule])
+            // this.ruleObj[leftrule].forEach
+            let ruleCheck = 0;
+            this.ruleObj[leftrule].forEach(rule =>{
+                let termCheck = 0;
+                rule.split("").forEach(symbol =>{
+                    if(this.getTerminals().has(symbol)){
+                        termCheck = 1;
+                    }
+                })
+                if(termCheck == 0)
+                {
+                    ruleCheck+=1;
+                }
+            });
+            
+            if(ruleCheck == this.ruleObj[leftrule].length){
+                this.unprovide.add(leftrule);
+            }
+        });
+        console.log(this.unprovide);
 
+        let obj = {}
+
+        this.rulesLeft().forEach(leftrule => {
+            let j = []
+            this.ruleObj[leftrule].forEach(rule => {
+               
+                let c = 1;
+                rule.split("").forEach(symbol => {
+                    if(this.unprovide.has(symbol)){ c = 0}
+                })
+                if(c) {j.push(rule)}
+            })
+            if(!this.unprovide.has(leftrule)) {obj[leftrule] = j}
+        })
+        console.log(obj)
+        this.ruleObj = obj;
         return this;
     }
+
+
+    getChains(){
+        this.chains = new Set();
+        this.rulesLeft().forEach(leftrule => {
+            // obj[leftrule] = this.ruleObj[leftrule];
+            let j =[];
+            this.ruleObj[leftrule].forEach( rule => {
+                if(rule.split("").length==1 && this.getNonTerminals().has(rule.split("")[0]) ) {
+
+                    this.chains.add(leftrule)
+                }
+            })
+        })
+        return this.chains
+    }
+
+    removeChains(){
+        
+
+        let obj = {}
+        this.rulesLeft().forEach(leftrule => {
+            // obj[leftrule] = this.ruleObj[leftrule];
+            let j =[];
+            this.ruleObj[leftrule].forEach( rule => {
+            //    console.log(rule);
+                if(rule.split("").length==1 && this.getNonTerminals().has(rule.split("")[0])) {
+                    // console.log(this.ruleObj[rule.split("")[0]]);
+                    j.push(this.ruleObj[rule.split("")[0]])
+                }
+                else j.push(rule);
+            })
+            // j.flat(1);
+            // console.log(j);
+            obj[leftrule] = [... new Set(j.flat(2))];
+        })
+        this.ruleObj = obj
+        console.log(obj);       
+        return this;
+    }
+
+    Chains(){
+        // while(this.getChains().size >0 )
+        
+        this.removeChains();
+        this.removeChains();
+        this.removeChains();
+        this.removeChains();
+        console.log(this.getChains().size)
+        return this;
+    }
+
     getEpsilonNonTerm(){
      
         // console.log(this.rulesLeft());
-        this.nullNonTerm = [];
+        this.nullNonTerm = new Set();
         
-        this.rulesLeft().forEach(element => {
-            // console.log(element);
-            // console.log(this.ruleObj[element])
-            let n = this.ruleObj[element].filter(rule => {
-                // console.log(rule);
-                if(!rule.split("").includes("ε")){return rule;}
-                else{this.nullNonTerm.push(element);}
-            });
-        });
+        this.rulesLeft().forEach(leftrule => {
+            if(this.ruleObj[leftrule]) {
+                // console.log(leftrule);
+                
+                if(this.ruleObj[leftrule].join("").split("").includes("ε")){
+                    // console.log(leftrule);
+                    this.nullNonTerm.add(leftrule);
+                    // console.log(this.nullNonTerm)
+                }
+            }
+        })
+        // console.log(this.nullNonTerm);
         return this.nullNonTerm;
     }
+
     removeEpsilonNonTerm(){
         
         let nullTerm = this.getEpsilonNonTerm();
         let obj = {};
-
-        // if(this.ruleObj[this.getFirstUnTerm()].join("").split("").includes("ε")){
-        //     obj[this.getFirstUnTerm() + "'"] = [this.getFirstUnTerm(), "ε"]
-        // }
-
         if(this.ruleObj[this.getFirstUnTerm()].join("").split("").includes("ε")){
-            obj[this.getFirstUnTerm() + "'"] = [this.getFirstUnTerm(), "ε"]
-            
-            // obj[this.getFirstUnTerm()] = this.ruleObj[this.getFirstUnTerm()].filter(rule =>{
-            //     console.log(rule);
-            //     if(rule!="ε") {return rule;}
-            // })
+            obj["Z"] = [this.getFirstUnTerm(), "ε"]
         }
+
+
         this.rulesLeft().forEach(rule => {
             let j = [];
             // console.log(this.ruleObj[rule]);
+            if(this.ruleObj[rule]){
             let n = this.ruleObj[rule].filter(element => {
                 if (!element.split("").includes("ε")){ return element;}});
             obj[rule] = n;
+            }
         })
+
+        
         this.rulesLeft().forEach(element => {
+            if(obj[element]){
             obj[element].forEach(sus =>{
                 // sus.split("").forEach( sas => {if(nullTerm.includes(sas)) 
                 //     this.ruleObj[element].push(sus);
@@ -141,50 +230,59 @@ class FormalLang{
 
                 for (let i = 0; i < sus.split("").length; i++) {
                     const ele = sus.split("")[i];
-                    if(nullTerm.includes(ele) && sus.split("").length>1){
+                    
+                    if(nullTerm.has(ele) && sus.split("").length>1){
                         let b = sus.split("");
                         b[i] = null;
 
+                        if(b.join("").split("").length <= 1) {
+                            console.log(b.join("").split(""))
+                            obj[element].push("ε");
+                        }
+                        
                         obj[element].push(b.join(""));
                     }
-                    // else if(!obj[element].includes("ε") && sus.split("").length<=1){
-                    //     obj[element].push("ε");
-                    // }
                     
+
                 }
-            })
-            
-        })
+                obj[element] = [... new Set(obj[element])]
 
-
-        if(obj[this.getFirstUnTerm()].join("").split("").includes("ε")){
-            obj[this.getFirstUnTerm() + "'"] = [this.getFirstUnTerm(), "ε"]
-            
-            obj[this.getFirstUnTerm()] = this.ruleObj[this.getFirstUnTerm()].filter(rule =>{
-                console.log(rule);
-                if(rule!="ε") {return rule;}
             })
         }
-        this.ruleObj = obj;
-        return this;    
+     })
+    this.ruleObj = obj;
+    // console.log(this.getEpsilonNonTerm())
+    return this;   
+
+    }
+
+
+
+    Eps() {
+        for(;;) {
+            this.removeEpsilonNonTerm();
+            if([... this.getEpsilonNonTerm()].join("").split("").includes("Z") || this.getEpsilonNonTerm().size==0) { break;}
+            
+        }
+            
+        console.log(this.ruleObj);
+        return this;
     }
 
     rulesLeft() {return Object.getOwnPropertyNames(this.ruleObj)};
 
     printRules(){
-        
+        // console.log(this.ruleObj);
         this.rulesString = "";
         this.rulesLeft().forEach(element => {
             // console.log(this.ruleObj[element]);
-            this.rulesString += element + "→" + this.ruleObj[element].join("|") + "\n";      
+            if(this.ruleObj[element]){
+            this.rulesString += element + "→" + this.ruleObj[element].join("|") + "\n";
+            }
         });
         document.getElementById("answer").innerText += this.rulesString;
 
         return this.rulesString;
-    }
-
-    getChainRules(){
-        
     }
 
     fixRec(leftright){
@@ -202,8 +300,8 @@ class FormalLang{
         this.rulesLeft().forEach(rule => {
             let j = [];
             this.ruleObj[rule].forEach(sym => {
-                j.push(sym);
-                if(sym.split("").length == 2 && this.getNonTerminals().has(sym.split("")[i])){
+                j.push(sym);    
+                if(sym.split("").length == 2 && this.getNonTerminals().has(sym.split("")[i]) && !this.getNonTerminals().has(sym.split("")[k])){
                     j.push(sym.split("")[k])
                 }
             })
@@ -211,6 +309,7 @@ class FormalLang{
 
         })
         this.ruleObj=obj;
+        this.clear();
         return this;
     }
     clear(){
@@ -221,7 +320,6 @@ class FormalLang{
         this.ruleObj = obj;
         return this;
     }
-
 }
 
 function myFunction() {
@@ -233,17 +331,29 @@ function myFunction() {
     //// console.log(o.ruleFromText(n).removeUnprovide().removeUnreachable().removeEpsilonNonTerm().fixRec(1).fixRec(0).clear().printRules());
     document.getElementById("answer").innerText="";
     document.getElementById("answer").innerText += "Непроизводящие\n\n";
-    o.ruleFromText(n);
+console.log("sus")
     o.ruleFromText(n).removeUnprovide().printRules();
     document.getElementById("answer").innerText += "\nНедостижимые\n\n";
-    o.ruleFromText(n).removeUnreachable().printRules();
+
+console.log("sus")
+    o.ruleFromText(n).removeUnprovide().removeUnreachable().printRules();
+
     document.getElementById("answer").innerText += "\nУдаляем е-правила\n\n";
-    o.ruleFromText(n).removeUnprovide().removeUnreachable().removeEpsilonNonTerm().removeEpsilonNonTerm().printRules();
+console.log("sus")
+    o.ruleFromText(n).removeUnprovide().removeUnreachable().Eps().printRules();
+    // o.ruleFromText(n).removeUnprovide().removeUnreachable().removeEpsilonNonTerm().printRules();
+    // document.getElementById("answer").innerText += "\nЧиним рекурсии:\nЛевая\n\n";
+    // o.ruleFromText(n).removeUnprovide().removeUnreachable().removeEpsilonNonTerm().fixRec(1).clear().printRules();
+    // document.getElementById("answer").innerText += "Правая\n\n";
+    // o.ruleFromText(n).removeUnprovide().removeUnreachable().removeEpsilonNonTerm().fixRec(1).fixRec(0).clear().printRules();
+    // document.getElementById("answer").innerText += "Цепные\n\n"
+    // o.ruleFromText(n).removeUnprovide().removeUnreachable().removeEpsilonNonTerm().fixRec(1).fixRec(0).clear().removeChains().printRules();
+    // o.ruleFromText(n).Eps().printRules();
+    // o.ruleFromText(n).Eps().Chains().printRules();
+
     document.getElementById("answer").innerText += "\nЧиним рекурсии:\nЛевая\n\n";
-    o.ruleFromText(n).removeUnprovide().removeUnreachable().removeEpsilonNonTerm().fixRec(1).clear().printRules();
-    document.getElementById("answer").innerText += "Правая\n\n";
-    o.ruleFromText(n).removeUnprovide().removeUnreachable().removeEpsilonNonTerm().fixRec(1).fixRec(0).clear().printRules();
-    let s = new FormalLang().ruleFromText(n);
-    s.removeUnprovide().printRules();
+o.ruleFromText(n).removeUnprovide().removeUnreachable().Eps().Chains().fixRec(1).printRules();
+    // let s = new FormalLang().ruleFromText(n);
+    // s.removeUnprovide().printRules();
 
   }

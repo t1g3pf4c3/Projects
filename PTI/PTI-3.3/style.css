@@ -12,12 +12,15 @@ body{
 	justify-content: space-around;
 	margin-top: 10px;
 	margin-bottom: 10px;
+
+
+    width: 100pex;
 }
 
 .NatFormItem p{
 	font-size: 30px;
 	width: 50%;
-	text-align: center;
+	text-align: center;        
 }
 .BirthForm{
 	display: flex;

@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  height: 75px;
+  margin: 0;
+  background-color: black;
+}
+
+header .header__margin {
+  margin-left: 230px;
+  margin-right: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .header__margin .header__section img {
+  height: 38px;
+  margin-left: 15px;
+}
+
+.logo {
+  background-color: #F1E4E6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo .logo__text {
+  margin-right: 331px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.logo .logo__text .logo__text__pipe {
+  height: 92px;
+  width: 12px;
+  background-color: #F16D7F;
+}
+
+.logo .logo__text .logo__text__block {
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo .logo__text .logo__text__block .logo__text__h1 {
+  font-size: 48px;
+  white-space: nowrap;
+}
+
+.logo .logo__text .logo__text__block .logo__text__h2 {
+  font-size: 32px;
+  white-space: nowrap;
+}
+
+.logo .logo__text .logo__text__block .logo__text__h2 #logo__text__h2__pink {
+  color: #F16D7F;
+}
+/*# sourceMappingURL=style.css.map */
