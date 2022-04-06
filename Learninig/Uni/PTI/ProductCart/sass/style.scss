@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    .products {
+        .products__inner_align {
+
+            .products__header {
+
+            }
+            #products__list {
+                .product {
+                    img {
+                        height: 100px;
+                        width: 100px;
+                    }
+                    .product__name {
+
+                    }
+                    .product__description {
+                    }
+                }
+            }
+        }
+    }
+}
+

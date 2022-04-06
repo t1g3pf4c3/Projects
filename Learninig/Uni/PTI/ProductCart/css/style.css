@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+body .products .products__inner_align #products__list .product img {
+  height: 100px;
+  width: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
