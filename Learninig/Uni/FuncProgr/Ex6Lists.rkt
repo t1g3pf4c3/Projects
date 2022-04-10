@@ -88,4 +88,28 @@
         ((not(= x (car set))) (standart-search x (cdr set)))))
 
 
-(standart-search 17 list_)
+(define (binary-search x set)
+  (if (null? set) #f
+  (if (standart-search x (list-tail set (quotient (length set) 2))) #t 
+    (binary-search x (list-tail (reverse set) (- (length set) (quotient (length set) 2))))
+    )
+  )
+  )
+
+(standart-search 6 list_)
+
+
+(quotient 15 2)
+
+(define list___ '(1 2 3 4 5 6 7 8 9 10))
+(binary-search 6 list___)
+
+
+
+
+
+(define (use-maps conditions list out-list)
+    (append (map (car conditions) list) out-list)
+   )
+
+(use-maps (list even? negative? positive? real?) '(25 -3 0 2) '(1 2 3))
