@@ -30,6 +30,36 @@ BEGIN
 END;
 SELECT get_bank_id('SberBankich') FROM DUAL;
 
+--- СРАЗУ НЕСКОЛЬКО ЗНАЧЕНИЙ
+create or replace function get_bank_id_multiple(b_name varchar2)
+return varchar2
+is
+cursor showcontrs(b_name varchar2) is
+select BANK_ID
+    from BANKS
+    where NAME = b_name;
+cur showcontrs%rowtype; -- курсор rowtype
+res varchar2(1000); -- результат (будет строка)
+
+begin 
+    open showcontrs(b_name);
+
+    fetch showcontrs into cur;    
+    if showcontrs%notfound then raise_application_error(-20176, 'Нет данных'); end if; -- проверка на ошибки сверху
+    
+    --while showcontrs%found loop  --циклом ищем остальные
+    --    res := to_char(cur.BANK_ID)||' '||res; -- нашли - запомнили в RES - это у нас просто строка с резултатом
+    --    fetch showcontrs into cur; -- поймали
+    --end loop;
+
+    for rec1 in showcontrs loop
+      res := to_char(cur.BANK_ID)||' '||res;
+      fetch showcontrs into cur; -- поймали
+    end loop;
+return res; --возвращаем нашу строку, будут результаты через запятую
+end;
+
+select get_bank_id_multiple('SberBankich') from dual;
 -- Функция, возвращающая количество действующих счетов в указанном банке для указанного контрагента;
 CREATE OR REPLACE FUNCTION getAccCount(bankId NUMBER, contID NUMBER)
 RETURN NUMBER

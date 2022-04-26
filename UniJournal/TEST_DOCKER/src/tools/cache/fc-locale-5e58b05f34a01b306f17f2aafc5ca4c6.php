@@ -1,0 +1,16 @@
+<?php return array (
+  'api.submissions.403.cantChangeContext' => 'Вы не можете изменить журнал для материала.',
+  'api.submissions.403.unpublishedIssues' => 'У вас нет прав для просмотра неопубликованных выпусков.',
+  'api.submissions.403.contextRequired' => 'Чтобы создать или отредактировать материал, вам нужно сделать запрос к конечной точке API журнала.',
+  'api.contexts.403.requestedDisabledContexts' => 'Вы можете просматривать только журналы, к которым был открыт доступ.',
+  'api.contexts.403.notAllowed' => 'У вас нет прав для просмотра этого журнала.',
+  'api.contexts.403.contextsDidNotMatch' => 'Вы не можете просматривать или редактировать этот журнал, не делая запроса к API журнала или API всего сайта.',
+  'api.contexts.403.requiresContext' => 'Вы не можете редактировать этот журнал через API сайта.',
+  'api.contexts.403.notAllowedEdit' => 'У вас нет прав для редактирования этого журнала.',
+  'api.contexts.403.notAllowedDelete' => 'У вас нет прав на удаление этого журнала.',
+  'api.contexts.404.contextNotFound' => 'Запрошенный вами журнал не найден.',
+  'api.emailTemplates.403.notAllowedChangeContext' => 'У вас нет прав на перемещение этого шаблона письма в другой журнал.',
+  'api._payments.400.invalidPaymentMethod' => 'Выбранный вами метод оплаты не поддерживается.',
+  'api.publications.403.contextsDidNotMatch' => 'Запрошенная вами публикация не является частью этого журнала.',
+  'api.publications.403.submissionsDidNotMatch' => 'Запрошенная вами публикация не является частью этого материала.',
+);

@@ -108,8 +108,10 @@
 
 
 
-(define (use-maps conditions list out-list)
-    (append (map (car conditions) list) out-list)
+(define (use-maps conditions list_ out-list)
+        (use-maps (cdr conditions) list_ (append (map (car conditions) list_) out-list)
+)
    )
 
-(use-maps (list even? negative? positive? real?) '(25 -3 0 2) '(1 2 3))
+(use-maps (list even? negative? positive? real?) '(26 -3 0 2) '())
+

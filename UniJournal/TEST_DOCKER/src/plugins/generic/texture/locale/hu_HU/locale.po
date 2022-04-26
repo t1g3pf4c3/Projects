@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-28 13:36+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/plugins/"
+"texture-plugin/hu/>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.texture.links.createGalley"
+msgstr "Megjelenítő létrehozása"
+
+msgid "plugins.generic.texture.displayName"
+msgstr "Texture Editor Plugin"
+
+msgid "plugins.generic.texture.description"
+msgstr "A plugin a Texture JATS XML szerkesztőt integrálja az OJS rendszerrel."
+
+msgid "plugins.generic.texture.links.editWithTexture"
+msgstr "Szerkesztés Texture-el"
+
+msgid "plugins.generic.texture.notification.extracted"
+msgstr "A DAR fájl kibontása sikeres"
+
+msgid "plugins.generic.texture.notification.noValidDarFile"
+msgstr "Nincs érvényes DAR fájl"
+
+msgid "plugins.generic.texture.notification.noManifest"
+msgstr "Nem érhető el \"manifest\" fájl"
+
+msgid "plugins.generic.texture.notification.noManuscript"
+msgstr "Nincs elérhető kéziratfájl"
+
+msgid "plugins.generic.texture.links.extractDarArchive"
+msgstr "DAR kiemelése"
+
+msgid "plugins.generic.texture.links.exportDarArchive"
+msgstr "DAR exportálása"

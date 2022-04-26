@@ -1,0 +1,44 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.31.0.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:10:59.445993 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:10:59.446069 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:11:37.325935 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.16.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:16:25.095634 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:16:25.095772 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:17:12.615969 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.32.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:19:19.748930 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:19:19.749031 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:19:51.922739 2022] [core:warn] [pid 1] AH00045: child process 25 still did not exit, sending a SIGTERM
+[Mon Apr 11 13:19:53.933039 2022] [core:warn] [pid 1] AH00045: child process 25 still did not exit, sending a SIGTERM
+[Mon Apr 11 13:19:55.938723 2022] [core:warn] [pid 1] AH00045: child process 25 still did not exit, sending a SIGTERM
+[Mon Apr 11 13:19:57.946666 2022] [core:error] [pid 1] AH00046: child process 25 still did not exit, sending a SIGKILL
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.48.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:20:46.464172 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:20:46.464254 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:20:51.321648 2022] [php7:notice] [pid 17] [client 192.168.48.1:56970] Connection refused, referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 11 13:23:11.635084 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.64.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:27:07.802959 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:27:07.803467 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:27:15.923955 2022] [php7:notice] [pid 17] [client 192.168.64.1:56920] ojs2: Database connection failed!
+[Mon Apr 11 13:32:06.643090 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.80.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:32:27.343395 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:32:27.343480 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:34:43.102175 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:35:01.679420 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:35:01.679507 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:36:39.428962 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.144.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:37:26.323405 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:37:26.323853 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:37:37.121617 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.107376 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.298118 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.472520 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.654767 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.838452 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.986066 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:38:14.929271 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down

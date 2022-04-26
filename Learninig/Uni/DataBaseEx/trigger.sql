@@ -5,7 +5,7 @@ Q-- 8 вариант
 --               Если нет таких менеджеров, то руководителя не приписывать и  сделать пометку в атрибуте Comments.
 CREATE OR REPLACE TRIGGER MAN_TRIG
 
-BEFORE INSERT ON MANAGERS --BEFORE Значит перед, взаимодействуем только с n:ew
+BEFORE INSERT ON MANAGERS --BEFORE Значит перед, взаимодействуем только с n:new
 
 FOR EACH ROW
 DECLARE

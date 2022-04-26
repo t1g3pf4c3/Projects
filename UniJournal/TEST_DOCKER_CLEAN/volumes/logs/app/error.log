@@ -1,0 +1,84 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.31.0.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:10:59.445993 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:10:59.446069 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:11:37.325935 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.16.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:16:25.095634 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:16:25.095772 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:17:12.615969 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.32.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:19:19.748930 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:19:19.749031 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:19:51.922739 2022] [core:warn] [pid 1] AH00045: child process 25 still did not exit, sending a SIGTERM
+[Mon Apr 11 13:19:53.933039 2022] [core:warn] [pid 1] AH00045: child process 25 still did not exit, sending a SIGTERM
+[Mon Apr 11 13:19:55.938723 2022] [core:warn] [pid 1] AH00045: child process 25 still did not exit, sending a SIGTERM
+[Mon Apr 11 13:19:57.946666 2022] [core:error] [pid 1] AH00046: child process 25 still did not exit, sending a SIGKILL
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.48.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:20:46.464172 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:20:46.464254 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:20:51.321648 2022] [php7:notice] [pid 17] [client 192.168.48.1:56970] Connection refused, referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 11 13:23:11.635084 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.64.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:27:07.802959 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:27:07.803467 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:27:15.923955 2022] [php7:notice] [pid 17] [client 192.168.64.1:56920] ojs2: Database connection failed!
+[Mon Apr 11 13:32:06.643090 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.80.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:32:27.343395 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:32:27.343480 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:34:43.102175 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:35:01.679420 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:35:01.679507 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:36:39.428962 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.144.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:37:26.323405 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:37:26.323853 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:37:37.121617 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.107376 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.298118 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.472520 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.654767 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.838452 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:37:38.986066 2022] [php7:notice] [pid 17] [client 192.168.144.1:40022] ojs2: Database connection failed!
+[Mon Apr 11 13:38:14.929271 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.160.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 11 13:44:50.633253 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 11 13:44:50.633750 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 11 13:45:27.362593 2022] [php7:notice] [pid 25] [client 192.168.160.1:58424] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install
+[Mon Apr 11 13:48:48.885515 2022] [php7:notice] [pid 26] [client 192.168.160.1:58426] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install
+[Mon Apr 11 13:48:54.987128 2022] [php7:notice] [pid 27] [client 192.168.160.1:58428] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 11 13:49:00.842765 2022] [php7:notice] [pid 28] [client 192.168.160.1:58430] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 11 13:49:23.710646 2022] [php7:notice] [pid 21] [client 192.168.160.1:58432] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install
+[Mon Apr 11 15:24:36.453089 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.80.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 25 10:18:18.744254 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 25 10:18:18.744532 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 25 10:18:53.727650 2022] [php7:notice] [pid 26] [client 192.168.80.1:52154] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install
+[Mon Apr 25 10:19:05.380917 2022] [php7:notice] [pid 27] [client 192.168.80.1:52156] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 25 10:19:42.334020 2022] [php7:notice] [pid 28] [client 192.168.80.1:52158] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 25 10:23:18.931500 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.96.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 25 10:23:48.385869 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 25 10:23:48.386339 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 25 10:24:22.952922 2022] [php7:notice] [pid 18] [client 192.168.96.1:56730] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install
+[Mon Apr 25 10:24:30.631087 2022] [php7:notice] [pid 19] [client 192.168.96.1:56732] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 25 10:24:37.443515 2022] [php7:notice] [pid 20] [client 192.168.96.1:56734] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 25 10:26:35.282184 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 25 10:27:50.446445 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 25 10:27:50.446513 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 25 10:28:26.598008 2022] [mpm_prefork:notice] [pid 1] AH00173: SIGHUP received.  Attempting to restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 25 10:28:26.626661 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 25 10:28:26.626694 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 25 10:28:45.100057 2022] [mpm_prefork:notice] [pid 1] AH00173: SIGHUP received.  Attempting to restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Apr 25 10:28:45.130782 2022] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.3.3 configured -- resuming normal operations
+[Mon Apr 25 10:28:45.130813 2022] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Apr 25 10:30:18.476355 2022] [php7:notice] [pid 62] [client 192.168.128.1:60588] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 25 10:30:22.808864 2022] [php7:notice] [pid 62] [client 192.168.128.1:60588] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 25 10:30:28.651827 2022] [php7:notice] [pid 63] [client 192.168.128.1:60590] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 25 10:35:02.969217 2022] [php7:notice] [pid 65] [client 192.168.128.1:60594] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install
+[Mon Apr 25 10:36:47.574901 2022] [php7:notice] [pid 66] [client 192.168.128.1:60596] could not find driver (SQL: create table `announcement_types` (`type_id` bigint not null auto_increment primary key, `assoc_type` smallint not null, `assoc_id` bigint not null) default character set utf8 collate 'utf8_general_ci'), referer: http://localhost:8000/index.php/index/install/install
+[Mon Apr 25 10:39:29.243864 2022] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
