@@ -275,12 +275,7 @@ class FormalLang {
     this.ruleObj[left_rule] = n;
     return this;
   }
-  replace_factorize() {
-    for (let left_rule in this.ruleObj) {
-      this.replace_factor(1, left_rule);
-    }
-    return this;
-  }
+
 
   replace_factorize() {
     for (let left_rule in this.ruleObj) {
