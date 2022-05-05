@@ -23,7 +23,6 @@
 )
 (cmp3 '(5 6 7 8) '(5 6 7 8))
 
-
 (define list_ '(1 2 3 4 5 6 7 8 9 10))
 
 (filter odd? list_)
@@ -35,6 +34,7 @@
     #f
    )
 )
+
 (define (divides2? a)
     (if (divides? 2 a)
       #t
@@ -109,9 +109,44 @@
 
 
 (define (use-maps conditions list_ out-list)
-        (use-maps (cdr conditions) list_ (append (map (car conditions) list_) out-list)
-)
-   )
+	(if (null? conditions) out-list
+		(use-maps (cdr conditions) list_ (append out-list (list(map (car conditions) list_))))
+	)
+  )
 
-(use-maps (list even? negative? positive? real?) '(26 -3 0 2) '())
+(use-maps (list even? negative? positive? negative?) '(25 -3 0 2) '())
 
+(define (padd p1 p2 out-list)
+	(cond ((and (null? p1) (null? p2)) out-list)
+		
+		 ((not (or (null? p1) (null? p2))) (padd (cdr p1) (cdr p2) (append out-list (list (+ (car p1) (car p2) )) ) ))
+		 ((null? p1)(padd p1 (cdr p2) (append out-list p2)))
+		 ((null? p2)(padd (cdr p1) p2 (append out-list p1)))
+	  )	
+  )
+
+(padd '(1 1) '(0 1 1) '())
+
+(define (pmulc p c)
+	(map (lambda (number) (* c number)) p)
+  )
+
+(pmulc '(1 1) 5)
+
+(define (shift p m out-list)
+	(if (eq? 0 m) (append out-list p)
+		(shift p (- m 1) (append out-list '(0)))
+	  )
+  )
+(define (pmulm p m c)
+	(pmulc (shift p m '()) c) )
+
+(pmulm '(1 2) 2 5) 
+
+(define (calcp p x m res)
+	(if (null? p) res
+		(calcp (cdr p) x (+ m 1) (+ res (* (car p) (expt x m))))
+	  )
+  )
+
+(calcp '(1 2) 0.7 0 0)

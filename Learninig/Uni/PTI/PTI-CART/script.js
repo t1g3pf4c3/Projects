@@ -17,7 +17,7 @@ let productList = () => {
   let namesList = ["Kartoshka", "Morkovka", "Kapusta", "Ogurets", "Pomidor"];
   let descriptionList = ["Malishka bes nojek", "Rijaya golovka", "Luchshe kartoshki", "Vkusniy pipets", "Bes om gay"];
   let priceList = [55, 98, 67, 33, 89];
-
+  console.log('sus');
   for (let i = 0; i < 5; i++) {
     list.push(product(i, namesList[i], descriptionList[i], priceList[i]));
   }
@@ -31,9 +31,11 @@ cartIncremet = (event) => {
   console.log(event.target.value);
   let product_id = event.target.parentElement.parentElement.id;
   cart[product_id] = event.target.value;
-  cartUpdate();
-}
 
+console.log('sys')
+	cartUpdate();
+	console.log('sus')
+}
 let addToCart = (event) => {
   let productElemButton = event.target;
   let product_id = productElemButton.parentElement.parentElement.id;
@@ -98,12 +100,12 @@ productList().forEach((product) => {
   let productElem = productListElement.appendChild(
     createElementFromHtml(
       `<div id="${product.id}" class="card my-3">
-  <div class="card-body">
-    <h5 class="card-title">${product.name}</h5>
-    <p class="card-text">${product.desc}</p>
-    <p class="card-text">${product.price} $</p>
-  </div>
-</div>`
+	  	<div class="card-body">
+    		<h5 class="card-title">${product.name}</h5>
+   		 	<p class="card-text">${product.desc}</p>
+   		 	<p class="card-text">${product.price} $</p>
+  		</div>
+		</div>`
     ))
   let productElemButton = document.createElement("a")
   productElemButton.className = "btn btn-primary";
@@ -111,9 +113,6 @@ productList().forEach((product) => {
   productElemButton.addEventListener("click", addToCart);
   productElem.children[0].appendChild(productElemButton);
   console.log(product)
+	
 })
-
-document.addEventListener("DOMContentLoaded", function(event) {
-
-});
 
