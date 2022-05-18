@@ -31,10 +31,12 @@ cartIncremet = (event) => {
   console.log(event.target.value);
   let product_id = event.target.parentElement.parentElement.id;
   cart[product_id] = event.target.value;
-
-console.log('sys')
+let price= event.target.parentElement.children;
+	
+	price.sus.innerText = productList()[product_id].price * event.target.value + "$"
+  
+console.log(productList()[product_id].price)
 	cartUpdate();
-	console.log('sus')
 }
 let addToCart = (event) => {
   let productElemButton = event.target;
@@ -56,6 +58,7 @@ let addToCart = (event) => {
     <h5 class="card-title">${product.name}</h5>
 
     <p class="card-text">${product.desc}</p>
+	<p class="card-text" id="sus">${product.price}$</p>
   </div>
 </div>`
       ))
@@ -92,8 +95,8 @@ let cartUpdate = () => {
     let product = productList().find(product => product.id == id);
     sum += cart[id] * product.price;
   }
-  console.log(sum);
   document.getElementById("total").innerText = "Total:" + sum + " $";
+	
 }
 
 productList().forEach((product) => {

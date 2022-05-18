@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-.cell { height:40px;width:40px; font-size: 40px; background:white;}
+.cell { height:70px;width:70px; margin:10px; font-size: 40px; background:white; text-align:center}
 .board { border: 1px black solid; display: inline-block;}
 .row { display: flex;}
 .black-cell   {background-color: #ff9340}
@@ -32,6 +32,11 @@ let figure ={
 let null_field = [[figobject("♜", 1, 0).icon , " ♞", " ♝", " ♛", " ♚", " ♝","♜", " ♞" ],
 ["♟", "♟","♟","♟","♟","♟","♟","♟"], 
 [""," "," "," "," "," "," "," "],
+["","","","","","","",""],
+["","","","","","","",""],
+["","","","","","","",""],
+["","","","","","","",""],
+["","","","","","","",""],
 ["","","","","","","",""],
 ["","","","","","","",""],
 ["","","","","","","",""],
@@ -70,7 +75,7 @@ function cellClick(event)
 
 }
   document.addEventListener("DOMContentLoaded", function(event) {
-    for(let i=0;i<8;i++)
+    for(let i=0;i<14;i++)
 	{
 		let row = document.querySelector('.board').appendChild(createElementFromHTML("<div class='row' ></div>"));
 		for(let e=0;e<8;e++)

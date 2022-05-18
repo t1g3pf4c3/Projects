@@ -15,10 +15,9 @@ let createElementFromHtml = (htmlString) => {
 	return div.firstChild;
 }
 
-submit = (event) => {
-	console.log(checkbox.checked)
-
-	if (numb.value && name.value && cvc.value && date.value && checkbox.checked) {
+submit = () => {
+	console.log(cvc.value)
+	if (/[0-9]$/.test(numb.value) && /[А-Я]$/.test(name.value) && /[0-9]$/.test(cvc.value) && date.value && checkbox.checked) {
 		answerField.innerHTML = "";
 		answerField.appendChild(createElementFromHtml(`
 <div class="card my-3" style="width: 18rem;">
