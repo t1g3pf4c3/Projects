@@ -350,8 +350,6 @@ function Factorize() {
 	printRules(test_lang.replace_factorize().ruleObj)
 }
 function Recursion() {
-
-
 	let answer = document.getElementById("answer").innerText;
 	answer += "Recursion\n"
 	let n = document.getElementById("text").value;

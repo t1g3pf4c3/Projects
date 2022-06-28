@@ -119,3 +119,4 @@ productList().forEach((product) => {
 	
 })
 
+let o = 0
